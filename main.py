@@ -6,6 +6,10 @@ import anthropic
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 AI_MODEL = os.getenv("AI_MODEL", "claude-3-5-sonnet-latest")
+print("ENV CHECK: TELEGRAM_TOKEN set =", bool(TELEGRAM_TOKEN))
+print("ENV CHECK: ANTHROPIC_API_KEY set =", bool(ANTHROPIC_API_KEY))
+if ANTHROPIC_API_KEY:
+    print("ENV CHECK: ANTHROPIC_API_KEY prefix =", ANTHROPIC_API_KEY[:7])
 
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
