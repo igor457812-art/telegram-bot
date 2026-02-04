@@ -4,7 +4,7 @@ from telegram.ext import ApplicationBuilder, MessageHandler, ContextTypes, filte
 import anthropic
 
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
-ANTHROPIC_API_KEY = "sk-ant-api03-uUYP5GfyrSaonqMfMJPeDQR-mw1hfoWz1k5qUr0ERIXW9_YNZspOAfb7aJO_IMkX2vLGcstAATPkAMa-vFHkKg-YsK_ZQAA"
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 AI_MODEL = os.getenv("AI_MODEL", "claude-3-5-sonnet-latest")
 print("ENV CHECK: TELEGRAM_TOKEN set =", bool(TELEGRAM_TOKEN))
 print("ENV CHECK: ANTHROPIC_API_KEY set =", bool(ANTHROPIC_API_KEY))
